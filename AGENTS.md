@@ -1,895 +1,649 @@
-# Siete IQ — Agent Instructions
+# SieteIQ — Agent Operating Instructions
 
 ## 1. Propósito del proyecto
 
-Siete IQ es el motor de inteligencia de **Siete Inteligencia Creativa**.
+SieteIQ es un sistema de inteligencia diseñado para transformar evidencia y datos relevantes en entendimiento útil para la toma de decisiones, la acción y el aprendizaje.
 
-No es un dashboard, un chatbot, una agencia tradicional de investigación de mercado ni una colección de agentes de IA.
+Su propósito no es producir más datos, más reportes ni más dashboards.
 
-Su propósito es construir un sistema replicable que permita transformar:
+Su propósito es ayudar a responder, de forma verificable:
 
-**fuentes → datos → contexto → relaciones → señales → hipótesis → evidencia → inteligencia → acción → aprendizaje**
+* ¿Qué está pasando?
+* ¿Qué sabemos realmente?
+* ¿Qué relaciones o patrones podemos observar?
+* ¿Qué podría explicar lo que estamos viendo?
+* ¿Qué no sabemos?
+* ¿Qué información necesitamos para reducir la incertidumbre?
+* ¿Qué decisiones o acciones podrían considerarse?
+* ¿Qué ocurrió después?
+* ¿Qué aprendimos?
 
-El objetivo es ayudar a una persona u organización a entender mejor qué está ocurriendo, qué podría explicarlo, qué no sabemos todavía, qué preguntas deben hacerse y qué acciones pueden probarse.
+## 2. Principio rector
 
-El sistema debe ser capaz de:
+La cadena fundamental de SieteIQ es:
 
-* observar;
-* comparar;
-* detectar cambios y patrones;
-* relacionar información de diferentes fuentes;
-* formular preguntas;
-* generar hipótesis;
-* cuestionar sus propias hipótesis;
-* identificar incertidumbre;
-* explicar sus razonamientos;
-* proponer acciones;
-* definir cómo medir esas acciones;
-* aprender de nuevos resultados.
+**DATOS → INFORMACIÓN → ENTENDIMIENTO → DECISIÓN → ACCIÓN → RESULTADO → APRENDIZAJE**
 
----
+Esta cadena debe orientar las decisiones de producto, arquitectura, datos, análisis, inteligencia artificial e interfaz.
 
-# 2. Principio fundamental
+La tecnología es un **habilitador**.
 
-## REALIDAD ANTES QUE IMPRESIÓN
+No es el producto.
 
-Siete IQ debe preferir una respuesta incompleta pero sustentada antes que una respuesta espectacular pero inventada.
+## 3. Qué SieteIQ NO es
 
-Nunca fabricar:
+SieteIQ no debe convertirse en:
 
-* datos;
-* fuentes;
-* citas;
-* estadísticas;
-* relaciones;
-* causalidades;
-* resultados;
-* conclusiones;
-* capacidades del sistema;
-* capacidades de una herramienta;
-* información sobre una organización;
-* información sobre una persona;
-* resultados de una consulta que no se haya ejecutado.
+* un dashboard por el simple hecho de tener datos;
+* una herramienta de Business Intelligence tradicional;
+* una base de datos presentada como producto;
+* un generador automático de informes;
+* un chatbot que responde preguntas sin evidencia;
+* una colección de agentes autónomos sin propósito;
+* una demostración tecnológica;
+* una plataforma que produzca conclusiones para impresionar al usuario;
+* una agencia de investigación tradicional disfrazada de tecnología.
 
-Si una información no está disponible, el sistema debe decir:
+Un dashboard puede formar parte de SieteIQ.
 
-> "No tenemos evidencia suficiente para determinarlo."
+Una base de datos puede formar parte de SieteIQ.
 
-Cuando corresponda, debe explicar qué información adicional permitiría avanzar.
+Un LLM puede formar parte de SieteIQ.
 
----
+Pero ninguno de ellos constituye por sí mismo la inteligencia.
 
-# 3. Mejor caso, pero real
+## 4. Inteligencia antes que interfaz
 
-El proyecto debe buscar un **best case realista**.
+Una interfaz no debe ocultar la ausencia de inteligencia.
 
-"Best case" significa:
+Antes de construir una visualización, reporte, chatbot o pantalla, debe existir una razón clara:
 
-* arquitectura sólida;
-* automatización progresiva;
-* buena experiencia de usuario;
-* capacidad de escalar;
-* procesos reproducibles;
-* uso inteligente de LLM;
-* capacidad de trabajar con múltiples fuentes;
-* resultados útiles para decisiones;
-* bajo costo inicial;
-* independencia razonable de proveedores.
+**¿Qué entendimiento o decisión mejora esta interfaz?**
 
-No significa:
+Si una visualización no mejora el entendimiento, no es prioritaria.
 
-* asumir capacidades que todavía no existen;
-* construir sistemas innecesariamente complejos;
-* utilizar tecnologías solamente porque son populares;
-* crear agentes autónomos sin necesidad;
-* pretender que el LLM razona correctamente por defecto;
-* afirmar causalidad sin diseño/evidencia apropiada;
-* prometer automatización total;
-* construir infraestructura empresarial antes de validar el problema.
+Si una funcionalidad no ayuda a responder una pregunta relevante, reducir incertidumbre, evaluar una hipótesis, tomar una decisión, ejecutar una acción o aprender de un resultado, debe cuestionarse su necesidad.
 
-La implementación debe ser **la más sencilla que permita alcanzar el resultado requerido con calidad suficiente**.
+La apariencia nunca debe sustituir el valor analítico.
 
----
+## 5. Data ≠ Information ≠ Intelligence
 
-# 4. Rol del agente de programación
+SieteIQ debe mantener una distinción explícita entre:
 
-El coding agent es un ejecutor técnico.
+### Datos
 
-No es el propietario del producto.
+Observaciones, registros, mediciones, documentos o valores provenientes de una fuente.
 
-No debe cambiar por iniciativa propia:
+### Información
 
-* la visión de Siete IQ;
-* la metodología de inteligencia;
-* la arquitectura conceptual;
-* los criterios de evidencia;
-* las definiciones de inteligencia;
-* las prioridades del producto;
-* los criterios comerciales.
+Datos organizados y contextualizados de forma que permitan describir qué está ocurriendo.
 
-Si una decisión de producto o arquitectura importante no está especificada, el agente debe:
+### Entendimiento
 
-1. identificar la incertidumbre;
-2. explicar las alternativas;
-3. recomendar una opción si tiene evidencia suficiente;
-4. solicitar confirmación cuando la decisión pueda afectar significativamente el proyecto.
+Interpretación fundamentada que relaciona información, contexto, comparación, conocimiento y evidencia.
 
-No debe ocultar incertidumbre detrás de código.
+### Inteligencia
 
----
+Entendimiento estructurado alrededor de una pregunta o decisión, incluyendo evidencia, hipótesis, incertidumbre, alternativas y posibles implicaciones.
 
-# 5. Principios de ingeniería
+### Acción
 
-## 5.1 Simplicidad
+Una decisión ejecutada o una intervención concreta derivada del entendimiento.
 
-Preferir:
+### Resultado
 
-* Python;
-* PostgreSQL;
-* DuckDB;
-* Polars/Pandas cuando sean apropiados;
-* SQL;
-* Git;
-* APIs simples;
-* estructuras de datos claras.
+Lo que ocurrió después de la acción.
 
-Evitar inicialmente:
+### Aprendizaje
+
+La actualización del entendimiento a partir de los resultados observados.
+
+No asumir que una etapa existe simplemente porque existe la anterior.
+
+Tener datos no significa tener información.
+
+Tener información no significa comprender.
+
+Comprender no garantiza una buena decisión.
+
+Una decisión no equivale a una acción.
+
+Una acción no garantiza un resultado.
+
+Y un resultado sin aprendizaje no completa el ciclo.
+
+## 6. La inteligencia debe ser verificable
+
+Toda afirmación producida por SieteIQ debe poder clasificarse.
+
+Como mínimo, distinguir:
+
+* **OBSERVADO** — directamente presente en una fuente.
+* **CALCULADO** — obtenido mediante una operación reproducible.
+* **ESTIMADO** — aproximación basada en supuestos explícitos.
+* **INFERIDO** — interpretación derivada de evidencia disponible.
+* **HIPÓTESIS** — explicación posible que todavía necesita validación.
+* **PROPUESTA** — posible acción o decisión.
+* **RESULTADO** — consecuencia observada posteriormente.
+* **DESCONOCIDO** — información que no está disponible o no puede establecerse.
+* **CONFLICTIVO** — fuentes o evidencias que no coinciden.
+
+No presentar una inferencia como un hecho.
+
+No presentar una hipótesis como una conclusión.
+
+No presentar una estimación como un dato observado.
+
+No ocultar la ausencia de información.
+
+## 7. Evidencia y procedencia
+
+Toda fuente relevante debe conservar su procedencia.
+
+Cuando sea posible, registrar:
+
+* fuente;
+* fecha;
+* período de referencia;
+* ubicación o URL;
+* metodología conocida;
+* unidad de medida;
+* población o universo;
+* versión;
+* fecha de acceso;
+* transformaciones realizadas;
+* supuestos relevantes.
+
+Los datos externos deben distinguirse de los datos generados internamente.
+
+Nunca eliminar el origen de un dato durante una transformación si conservarlo es técnicamente posible.
+
+La trazabilidad debe permitir responder:
+
+**¿De dónde salió esta afirmación?**
+
+## 8. No confundir correlación con causalidad
+
+SieteIQ debe ser especialmente cuidadoso con explicaciones causales.
+
+Una coincidencia temporal, correlación estadística o relación aparente no demuestra causalidad.
+
+Cuando la evidencia no permita establecer causalidad, utilizar lenguaje apropiado:
+
+* asociado con;
+* coincide con;
+* podría estar relacionado con;
+* es consistente con;
+* constituye una hipótesis;
+* requiere investigación adicional.
+
+No convertir una correlación en una explicación causal mediante lenguaje generado por IA.
+
+## 9. Comparabilidad
+
+Antes de comparar datos, comprobar si realmente son comparables.
+
+Considerar, cuando corresponda:
+
+* período;
+* población;
+* universo;
+* definición;
+* unidad;
+* metodología;
+* cobertura;
+* geografía;
+* fuente;
+* cambios regulatorios;
+* cambios metodológicos.
+
+Una diferencia numérica no necesariamente representa una diferencia real del fenómeno.
+
+## 10. Contexto antes de interpretación
+
+Los números deben interpretarse dentro de su contexto.
+
+SieteIQ debe buscar, cuando sea relevante:
+
+* histórico;
+* geográfico;
+* económico;
+* demográfico;
+* institucional;
+* regulatorio;
+* competitivo;
+* operativo;
+* temporal.
+
+No utilizar una cifra aislada para construir una conclusión amplia cuando el contexto disponible pueda cambiar su interpretación.
+
+## 11. Preguntas antes que respuestas
+
+SieteIQ debe privilegiar la formulación correcta del problema.
+
+Una buena respuesta a una mala pregunta puede producir una mala decisión.
+
+Ante una pregunta ambigua:
+
+1. identificar la ambigüedad;
+2. explicitar los supuestos;
+3. determinar qué información está disponible;
+4. determinar qué información falta;
+5. reformular la pregunta cuando sea necesario.
+
+El sistema debe poder decir:
+
+**“No sabemos todavía.”**
+
+Eso es un resultado válido.
+
+## 12. Hipótesis
+
+Cuando exista una explicación posible, estructurarla como hipótesis.
+
+Una hipótesis debe poder relacionarse con:
+
+* evidencia que la respalda;
+* evidencia que la contradice;
+* información faltante;
+* explicaciones alternativas;
+* nivel de incertidumbre;
+* método posible de validación.
+
+No construir una única narrativa cuando existen explicaciones plausibles alternativas.
+
+## 13. Challenge Engine
+
+SieteIQ debe intentar debilitar sus propias conclusiones.
+
+Cuando una hipótesis o interpretación sea relevante, el sistema debe preguntarse:
+
+* ¿Qué evidencia contradice esta hipótesis?
+* ¿Qué otra explicación podría producir el mismo patrón?
+* ¿Qué supuesto estamos dando por cierto?
+* ¿Qué dato podría cambiar la conclusión?
+* ¿Estamos confundiendo correlación con causalidad?
+* ¿La fuente es suficiente para esta afirmación?
+* ¿Estamos extrapolando más allá de la población observada?
+
+El objetivo no es generar duda artificial.
+
+El objetivo es reducir conclusiones frágiles.
+
+## 14. Lentes de decisión
+
+SieteIQ puede examinar un problema desde diferentes perspectivas cuando estas sean relevantes.
+
+Ejemplos:
+
+* dirección;
+* finanzas;
+* operaciones;
+* comercial;
+* investigación;
+* gestión pública;
+* docente;
+* dirección escolar;
+* estudiante;
+* familia;
+* territorio;
+* planificación.
+
+Estas perspectivas no son “personas artificiales” que deben actuar como personajes.
+
+Son **lentes analíticos**.
+
+Dos lentes pueden producir interpretaciones diferentes.
+
+SieteIQ no debe ocultar automáticamente esa discrepancia.
+
+Debe mostrar la evidencia, los supuestos y las diferencias de perspectiva.
+
+## 15. El papel de la inteligencia artificial
+
+Los LLM son herramientas de razonamiento lingüístico y asistencia analítica.
+
+Pueden utilizarse para:
+
+* interpretar lenguaje;
+* clasificar información;
+* extraer entidades;
+* estructurar documentos;
+* generar preguntas;
+* formular hipótesis;
+* identificar posibles relaciones;
+* comparar textos o contextos;
+* proponer explicaciones alternativas;
+* desafiar hipótesis;
+* sintetizar evidencia;
+* explicar resultados;
+* ayudar a construir consultas.
+
+No deben ser la autoridad final para:
+
+* cálculos determinísticos;
+* agregaciones;
+* identificadores;
+* fechas verificables;
+* valores que pueden calcularse directamente;
+* hechos oficiales cuando exista una fuente verificable;
+* conclusiones causales sin evidencia adecuada.
+
+Cuando una máquina pueda calcular algo de manera determinística, debe hacerlo mediante código o una herramienta determinística, no mediante una estimación lingüística del LLM.
+
+## 16. La arquitectura debe preservar la independencia del proveedor
+
+SieteIQ no debe depender estructuralmente de un único proveedor de IA.
+
+La arquitectura debe permitir, cuando sea razonable:
+
+* cambiar de modelo;
+* cambiar de proveedor;
+* utilizar modelos locales;
+* utilizar APIs externas;
+* funcionar parcialmente sin LLM.
+
+El conocimiento, los datos, las reglas y la lógica del sistema pertenecen al proyecto.
+
+No deben quedar encerrados innecesariamente dentro de un proveedor.
+
+## 17. Arquitectura conceptual
+
+La arquitectura inicial debe seguir esta lógica:
+
+**FUENTES**
+↓
+**INGESTIÓN**
+↓
+**DATOS RAW**
+↓
+**VALIDACIÓN**
+↓
+**NORMALIZACIÓN**
+↓
+**MODELO DE DATOS**
+↓
+**MOTOR ANALÍTICO**
+↓
+**MODELO DE EVIDENCIA**
+↓
+**MOTOR DE INTELIGENCIA**
+↓
+**CAPA LLM / RAZONAMIENTO**
+↓
+**CHALLENGE**
+↓
+**LENTES**
+↓
+**DECISIÓN / ACCIÓN**
+↓
+**RESULTADO**
+↓
+**APRENDIZAJE**
+
+La implementación concreta puede cambiar.
+
+La cadena lógica no debe perderse.
+
+## 18. Simplicidad primero
+
+Construir la solución más sencilla que permita demostrar la hipótesis del producto.
+
+No introducir tecnología por prestigio, moda o anticipación.
+
+Evitar inicialmente, salvo necesidad demostrada:
 
 * Kubernetes;
-* microservicios innecesarios;
+* microservicios;
 * Spark;
 * Databricks;
 * arquitecturas distribuidas;
 * data lakes complejos;
 * entrenamiento de modelos propios;
-* sistemas de agentes múltiples sin necesidad;
-* infraestructura costosa.
+* sistemas multiagente complejos;
+* infraestructura innecesaria;
+* múltiples bases de datos sin justificación.
 
-La complejidad debe justificarse por una necesidad real.
+La complejidad debe ser consecuencia de una necesidad real.
 
----
+## 19. Stack inicial preferido
 
-# 6. Independencia de proveedores
+Cuando sea apropiado, el proyecto puede comenzar con:
 
-Siete IQ no debe depender conceptualmente de un único proveedor de IA.
-
-El código debe separar:
-
-**inteligencia de negocio**
-
-de
-
-**proveedor/modelo de IA**.
-
-Cuando se utilice un LLM, crear una interfaz que permita cambiar posteriormente de proveedor.
-
-Ejemplo conceptual:
-
-```text
-IQ
- │
- └── LLM Interface
-       ├── Provider A
-       ├── Provider B
-       ├── Provider C
-       └── Local model
-```
-
-No implementar integraciones múltiples solamente por anticipación.
-
-Primero debe existir una necesidad real.
-
----
-
-# 7. LLM: qué puede hacer y qué no
-
-El LLM puede utilizarse para tareas como:
-
-* interpretación de lenguaje;
-* clasificación;
-* extracción de entidades;
-* generación de preguntas;
-* generación de hipótesis;
-* resumen;
-* comparación semántica;
-* explicación;
-* búsqueda asistida;
-* identificación de posibles relaciones;
-* generación de alternativas;
-* cuestionamiento de una hipótesis;
-* traducción entre lenguaje técnico y ejecutivo.
-
-El LLM NO debe ser la autoridad para:
-
-* cálculos financieros;
-* cálculos estadísticos;
-* agregaciones;
-* porcentajes;
-* conteos;
-* fechas;
-* identificadores;
-* reglas determinísticas;
-* resultados matemáticos;
-* datos oficiales;
-* causalidad científica;
-* hechos que puedan verificarse directamente.
-
-Cuando una operación pueda ejecutarse determinísticamente con código o SQL, debe preferirse código o SQL.
-
----
-
-# 8. Evidencia
-
-Toda afirmación relevante producida por Siete IQ debe poder clasificarse.
-
-Tipos mínimos:
-
-* `OBSERVATION`
-* `CALCULATION`
-* `ESTIMATE`
-* `INFERENCE`
-* `HYPOTHESIS`
-* `ACTION`
-* `OUTCOME`
-* `UNKNOWN`
-
-El sistema debe evitar presentar una inferencia como si fuera un dato observado.
-
-Siempre que sea posible registrar:
-
-* fuente;
-* dataset;
-* variable;
-* período;
-* población;
-* unidad;
-* método;
-* transformación;
-* fecha de procesamiento;
-* evidencia utilizada;
-* nivel de confianza;
-* limitaciones.
-
----
-
-# 9. Causalidad
-
-Siete IQ no debe convertir automáticamente una relación estadística en causalidad.
-
-Ejemplo:
-
-Incorrecto:
-
-> "La inversión provocó el aumento del rendimiento."
-
-Si los datos solamente muestran una asociación:
-
-> "La inversión y el rendimiento aumentaron conjuntamente."
-
-La conclusión causal requiere evidencia y diseño adecuados.
-
-Cuando exista una posible relación causal, utilizar lenguaje como:
-
-* "podría estar relacionado";
-* "es consistente con";
-* "sugiere";
-* "merece investigación";
-* "no podemos determinar causalidad con estos datos".
-
----
-
-# 10. Comparabilidad
-
-Antes de comparar dos datos, verificar cuando sea relevante:
-
-* definición;
-* población;
-* unidad;
-* período;
-* metodología;
-* cobertura;
-* escala;
-* composición;
-* fuente;
-* cambios metodológicos;
-* datos faltantes;
-* incertidumbre.
-
-No asumir que dos números son comparables simplemente porque tienen el mismo nombre.
-
----
-
-# 11. El modelo de inteligencia
-
-El sistema debe aspirar a producir la siguiente cadena:
-
-```text
-DATA
-  ↓
-CONTEXT
-  ↓
-COMPARISON
-  ↓
-RELATIONSHIP
-  ↓
-SIGNAL
-  ↓
-QUESTION
-  ↓
-HYPOTHESIS
-  ↓
-CHALLENGE
-  ↓
-EVIDENCE
-  ↓
-INTELLIGENCE
-  ↓
-IMPLICATION
-  ↓
-ACTION
-  ↓
-OUTCOME
-  ↓
-LEARNING
-```
-
-La cadena no debe ejecutarse artificialmente si una etapa no tiene evidencia suficiente.
-
-Es válido detenerse.
-
-Por ejemplo:
-
-```text
-DATA
-  ↓
-COMPARISON
-  ↓
-SIGNAL
-  ↓
-UNKNOWN
-```
-
-Esto puede ser un resultado correcto.
-
----
-
-# 12. Challenge Engine
-
-Una conclusión no debe considerarse madura simplemente porque un LLM la generó.
-
-Cuando sea apropiado, el sistema debe intentar debilitarla.
-
-Debe preguntar:
-
-* ¿qué evidencia contradice esta hipótesis?
-* ¿qué explicación alternativa existe?
-* ¿hay una variable omitida?
-* ¿cambió la metodología?
-* ¿cambió la composición de la población?
-* ¿hay selección de casos?
-* ¿la relación podría ser espuria?
-* ¿el período analizado es suficiente?
-* ¿qué información todavía falta?
-* ¿qué tendría que observarse para considerar incorrecta esta explicación?
-
-El objetivo no es destruir toda conclusión.
-
-El objetivo es evitar conclusiones débiles presentadas como certezas.
-
----
-
-# 13. Incertidumbre
-
-La incertidumbre es un resultado válido del sistema.
-
-Siete IQ debe distinguir entre:
-
-* sabemos;
-* calculamos;
-* estimamos;
-* inferimos;
-* sospechamos;
-* proponemos como hipótesis;
-* no sabemos.
-
-Nunca utilizar un porcentaje de "confidence" simplemente porque el modelo lo generó.
-
-Un nivel de confianza debe tener una definición y metodología documentada.
-
----
-
-# 14. Lentes
-
-Siete IQ puede analizar un problema desde diferentes perspectivas.
-
-Inicialmente pueden incluir:
-
-* docente;
-* director de centro;
-* técnico distrital;
-* familia/APMAE;
-* estudiante;
-* gestión central;
-* planificación/finanzas;
-* investigador;
-* Siete IQ.
-
-Los lentes no son personajes ficticios.
-
-Cada lente representa:
-
-* objetivos;
-* decisiones;
-* información disponible;
-* restricciones;
-* preguntas;
-* intereses;
-* horizonte temporal.
-
-Los lentes pueden discrepar.
-
-El sistema no debe elegir automáticamente quién tiene razón.
-
-Debe mostrar:
-
-**qué observa cada lente + qué evidencia lo respalda + dónde existe discrepancia.**
-
----
-
-# 15. Acciones
-
-Una acción propuesta debe ser concreta.
-
-Cuando sea posible debe especificar:
-
-* qué;
-* quién;
-* dónde;
-* cuándo;
-* para qué;
-* recursos necesarios;
-* indicador de seguimiento;
-* resultado esperado;
-* cómo determinar si funcionó.
-
-Una recomendación genérica como:
-
-> "Hay que mejorar la educación."
-
-no constituye una acción útil.
-
----
-
-# 16. Datos
-
-Nunca modificar los datos originales.
-
-Utilizar una separación conceptual:
-
-```text
-data/raw/
-data/processed/
-data/external/
-```
-
-Los archivos originales deben permanecer preservados.
-
-Toda transformación debe ser reproducible.
-
-Cuando sea posible:
-
-```text
-RAW
- ↓
-EXTRACT
- ↓
-VALIDATE
- ↓
-NORMALIZE
- ↓
-TRANSFORM
- ↓
-ANALYZE
-```
-
-Debe ser posible volver a ejecutar el proceso.
-
----
-
-# 17. Fuentes
-
-Las fuentes deben conservar su procedencia.
-
-Registrar cuando sea posible:
-
-* nombre de la fuente;
-* organización;
-* URL o referencia;
-* fecha de acceso;
-* período de los datos;
-* archivo original;
-* versión;
-* metodología;
-* limitaciones.
-
-Preferir fuentes primarias y oficiales cuando existan.
-
-Las fuentes secundarias pueden utilizarse cuando aporten información relevante, pero deben identificarse como tales.
-
----
-
-# 18. Proyecto inicial: PISA
-
-El primer laboratorio de Siete IQ será educación utilizando PISA como una de las fuentes.
-
-PISA NO es el producto.
-
-PISA NO debe utilizarse para crear rankings de centros educativos que los datos no permitan sostener.
-
-El objetivo inicial es demostrar que Siete IQ puede pasar de:
-
-> "República Dominicana obtuvo X puntos."
-
-a:
-
-> "¿Qué cambió, dónde, en qué población, en qué contexto, qué relaciones aparecen, qué explicaciones son compatibles con los datos, cuáles no podemos sostener y qué debería investigarse o probarse?"
-
-El sistema debe reconocer las limitaciones de la muestra y del diseño de PISA.
-
-No extrapolar resultados a niveles que el diseño de la fuente no permita.
-
----
-
-# 19. Arquitectura inicial
-
-La arquitectura conceptual es:
-
-```text
-SOURCES
-   ↓
-INGESTION
-   ↓
-RAW DATA
-   ↓
-VALIDATION
-   ↓
-NORMALIZATION
-   ↓
-DATA MODEL
-   ↓
-ANALYTICAL ENGINE
-   ↓
-EVIDENCE MODEL
-   ↓
-INTELLIGENCE ENGINE
-   ↓
-LLM / REASONING LAYER
-   ↓
-CHALLENGE
-   ↓
-LENSES
-   ↓
-ACTION
-   ↓
-USER INTERFACE
-```
-
-No construir todos los componentes simultáneamente.
-
-Cada capa debe demostrar utilidad antes de aumentar la complejidad.
-
----
-
-# 20. Base tecnológica inicial
-
-Preferencias iniciales:
-
-* Python 3.12;
+* Python;
 * PostgreSQL;
-* Supabase como infraestructura inicial si resulta conveniente;
-* DuckDB para análisis local;
-* Polars/Pandas según necesidad;
+* DuckDB;
+* Polars o Pandas;
 * Git/GitHub;
-* Next.js para interfaz cuando sea necesario;
-* APIs de LLM mediante una capa de abstracción;
-* Docker solamente cuando aporte valor real.
+* una capa de aplicación sencilla;
+* un proveedor LLM intercambiable.
 
-Estas son preferencias, no dogmas.
+Supabase puede utilizarse como infraestructura inicial cuando simplifique el desarrollo.
 
-Una tecnología puede cambiar si existe una razón técnica documentada.
+Estas tecnologías no son dogmas.
 
----
+Si una alternativa resulta técnicamente más apropiada, documentar la razón.
 
-# 21. Seguridad
+## 20. Separación de datos
 
-Nunca colocar en Git:
+Mantener conceptualmente separados:
 
-* API keys;
-* passwords;
-* tokens;
-* secrets;
-* credenciales;
-* archivos `.env` reales.
+* datos originales;
+* datos procesados;
+* datos derivados;
+* datos externos;
+* resultados analíticos;
+* hipótesis;
+* conclusiones;
+* acciones;
+* resultados posteriores.
 
-Utilizar:
+No sobrescribir información original innecesariamente.
 
-```text
-.env
-.env.example
-```
+Las transformaciones importantes deben ser reproducibles.
 
-`.env` debe estar incluido en `.gitignore`.
+## 21. Reproducibilidad
 
-Nunca imprimir secretos en logs.
+Un resultado importante debe poder reproducirse.
 
----
+Siempre que sea razonable, conservar:
 
-# 22. Código
-
-El código debe priorizar:
-
-* claridad;
-* funciones pequeñas;
-* nombres descriptivos;
-* tipos cuando aporten valor;
-* manejo explícito de errores;
-* validación de inputs;
-* tests;
-* documentación;
-* reproducibilidad.
-
-No escribir código innecesariamente sofisticado.
-
-No crear abstracciones "por si acaso".
-
-No duplicar lógica si una abstracción sencilla resuelve el problema.
-
----
-
-# 23. Tests
-
-Toda funcionalidad importante debe tener una forma objetiva de comprobarse.
-
-Priorizar:
-
-* unit tests;
-* tests de integración cuando sean necesarios;
-* validación de schemas;
-* tests de datos;
-* tests de reproducibilidad.
-
-Un módulo no está terminado simplemente porque "corre".
-
-Debe poder verificarse.
-
----
-
-# 24. Evaluación de inteligencia
-
-Siete IQ necesita evaluar no solamente si el software funciona, sino si sus resultados son buenos.
-
-Las evaluaciones pueden clasificar resultados como:
-
-* `CORRECT`
-* `INCORRECT`
-* `INCOMPLETE`
-* `UNSUPPORTED`
-* `INTERESTING`
-* `REDUNDANT`
-* `INVALID_ACTION`
-* `GOOD_QUESTION`
-
-La evaluación humana inicial es parte del desarrollo del sistema.
-
-No asumir que una respuesta generada por un LLM es correcta porque suena convincente.
-
----
-
-# 25. Documentación
-
-Cada módulo importante debe documentar:
-
-1. qué hace;
-2. qué problema resuelve;
-3. inputs;
-4. outputs;
-5. dependencias;
-6. cómo ejecutarlo;
-7. cómo verificarlo;
-8. limitaciones;
-9. decisiones relevantes.
-
-La documentación debe describir el sistema real, no el sistema imaginado.
-
----
-
-# 26. Workflow obligatorio del coding agent
-
-Antes de modificar código:
-
-1. inspeccionar el repositorio;
-2. identificar archivos relevantes;
-3. comprender las convenciones existentes;
-4. determinar dependencias;
-5. describir brevemente el cambio propuesto;
-6. implementar la modificación más pequeña que resuelva el problema;
-7. ejecutar tests/validaciones;
-8. corregir errores;
-9. revisar efectos secundarios;
-10. documentar lo necesario;
-11. resumir qué cambió y cómo verificarlo.
-
-No reescribir archivos completos si un cambio localizado es suficiente.
-
-No crear archivos innecesarios.
-
-No cambiar tecnologías sin justificación.
-
----
-
-# 27. Regla contra la alucinación técnica
-
-Si el agente no sabe:
-
-* una API;
-* una versión;
-* una función;
-* un comportamiento de una librería;
-* una estructura de datos;
-* una capacidad de una herramienta;
-
-debe verificarlo mediante documentación disponible o inspección del entorno.
-
-Nunca inventar una API para que el código parezca completo.
-
-Si no puede verificarlo:
-
-> indicar la incertidumbre antes de implementarlo.
-
----
-
-# 28. Regla contra el sobreingeniería
-
-Antes de agregar una tecnología, servicio, agente o dependencia, preguntar:
-
-> ¿Qué problema real resuelve ahora?
-
-Si la respuesta es "lo necesitaremos cuando escalemos", no incorporarlo todavía salvo que el costo de introducirlo posteriormente sea materialmente mayor.
-
----
-
-# 29. Agentes
-
-No construir un sistema multiagente simplemente porque es posible.
-
-Inicialmente preferir:
-
-1. workflow determinístico;
-2. funciones especializadas;
-3. un LLM cuando aporte valor;
-4. evaluación;
-5. automatización;
-6. agentes solamente cuando exista una tarea que realmente se beneficie de autonomía.
-
-La autonomía debe ganarse mediante evidencia de confiabilidad.
-
----
-
-# 30. Principio de reproducibilidad
-
-El conocimiento de Juan debe convertirse progresivamente en:
-
-* reglas;
-* schemas;
-* procesos;
 * código;
-* prompts versionados;
-* evaluaciones;
-* documentación;
-* datasets de prueba.
+* versión;
+* parámetros;
+* fuentes;
+* fechas;
+* supuestos;
+* transformaciones;
+* consultas;
+* modelo utilizado;
+* instrucciones relevantes para el LLM.
 
-El objetivo es que Siete IQ no dependa permanentemente de la memoria o criterio tácito de una sola persona.
+Una respuesta que no puede reconstruirse debe tratarse con mayor cautela.
 
-La automatización debe capturar el proceso, no reemplazar ciegamente el juicio.
+## 22. Acción
 
----
+La inteligencia no termina en una explicación.
 
-# 31. Principio de aprendizaje
+Cuando corresponda, una salida puede especificar:
 
-Cada error importante debe convertirse, cuando sea apropiado, en:
+* decisión que debe considerarse;
+* acción propuesta;
+* responsable;
+* horizonte temporal;
+* indicador de seguimiento;
+* condición de éxito;
+* riesgos;
+* información que debe revisarse posteriormente.
 
-* un test;
-* una regla;
-* una validación;
-* una mejora de documentación;
-* una mejora del prompt;
-* una mejora del modelo;
-* o una decisión explícita de no automatizar.
+SieteIQ no debe ejecutar automáticamente acciones de alto impacto sin autorización humana explícita.
 
-No corregir repetidamente el mismo problema de forma manual.
+## 23. Resultados y aprendizaje
 
----
+Cuando una acción sea ejecutada y exista información posterior, SieteIQ debe poder registrar:
 
-# 32. Regla de oro
+* qué se decidió;
+* qué se hizo;
+* cuándo;
+* qué se esperaba;
+* qué ocurrió;
+* qué evidencia apareció;
+* qué hipótesis se fortalecieron;
+* qué hipótesis se debilitaron;
+* qué cambió en el entendimiento.
 
-Siete IQ no debe intentar impresionar con información.
+El objetivo final es cerrar el ciclo:
 
-Debe conseguir que el usuario pueda decir:
+**Entender → Decidir → Actuar → Medir → Aprender.**
 
-> **"Ahora entiendo mejor qué está pasando, sé qué no sabemos y sé cuál es la siguiente pregunta o acción que tiene sentido."**
+## 24. Seguridad y control humano
 
-Si además puede demostrar:
+No ejecutar acciones destructivas, irreversibles o de alto impacto sin autorización explícita.
 
-> **qué evidencia sustenta esa inteligencia,**
+No exponer secretos, credenciales, tokens o información privada.
 
-y posteriormente:
+No incorporar credenciales directamente al código.
 
-> **qué ocurrió después de actuar,**
+Las operaciones que puedan modificar datos, infraestructura o repositorios deben ser explícitas y revisables.
 
-entonces estamos construyendo un sistema de inteligencia y no simplemente un sistema de generación de respuestas.
+El agente técnico ejecuta instrucciones.
 
----
+No sustituye al responsable del producto.
 
-# 33. Criterio final de calidad
+## 25. Rol del agente
 
-Antes de considerar terminada una funcionalidad, evaluar:
+El agente es un **ejecutor técnico y asistente de ingeniería**.
 
-### REAL
+Debe:
 
-¿Funciona realmente?
+* inspeccionar antes de modificar;
+* explicar decisiones importantes;
+* respetar este documento;
+* evitar inventar;
+* identificar incertidumbres;
+* mantener cambios pequeños y revisables;
+* escribir código mantenible;
+* probar lo que construye;
+* documentar decisiones relevantes.
 
-### VERIFICABLE
+No debe asumir decisiones de producto que correspondan al responsable humano.
 
-¿Podemos comprobarlo?
+## 26. Regla de realidad
 
-### REPRODUCIBLE
+Antes de afirmar que una funcionalidad existe, comprobar que existe.
 
-¿Podemos ejecutarlo nuevamente?
+Antes de afirmar que un dato es correcto, verificar su fuente.
 
-### EXPLICABLE
+Antes de afirmar que un sistema funciona, probarlo.
 
-¿Podemos entender cómo llegó al resultado?
+Antes de agregar una dependencia, demostrar que es necesaria.
 
-### SUSTENTADO
+Antes de crear una arquitectura compleja, demostrar que la simplicidad no es suficiente.
 
-¿La evidencia respalda la afirmación?
+Si algo no puede verificarse, decirlo explícitamente.
 
-### ÚTIL
+## 27. Criterio de calidad
 
-¿Ayuda a responder una pregunta real?
+Una implementación de SieteIQ debe aspirar a ser:
 
-### ACCIONABLE
+**REAL**
+Existe y funciona.
 
-¿Puede conducir a una acción razonable?
+**VERIFICABLE**
+Sus afirmaciones y resultados pueden comprobarse.
 
-### MANTENIBLE
+**REPRODUCIBLE**
+Puede reconstruirse el resultado.
 
-¿Otra persona podría entender y modificar el sistema?
+**EXPLICABLE**
+Puede entenderse cómo se llegó a él.
 
-### ECONÓMICO
+**SUSTENTADA**
+Las conclusiones tienen evidencia suficiente.
 
-¿La complejidad y el costo están justificados?
+**ÚTIL**
+Mejora el entendimiento de un problema real.
 
-Si no cumple alguno de estos criterios, no asumir que está terminado.
+**ACCIONABLE**
+Puede contribuir a una decisión o acción.
 
----
+**MANTENIBLE**
+Puede modificarse sin reconstruir todo el sistema.
 
-# 34. Prioridad absoluta
+**ECONÓMICA**
+La complejidad y el costo son proporcionales al valor obtenido.
 
-Durante la construcción inicial:
+## 28. Anti-overengineering
 
-**CALIDAD > VELOCIDAD**
+No construir infraestructura para problemas que todavía no existen.
 
-pero:
+No crear abstracciones prematuras.
 
-**SIMPLICIDAD > COMPLEJIDAD**
+No crear agentes porque “podrían ser útiles”.
 
-y:
+No incorporar una tecnología porque sea técnicamente interesante.
+
+Primero demostrar valor.
+
+Después escalar la arquitectura según la evidencia.
+
+## 29. Aprendizaje a partir de errores
+
+Los errores son información.
+
+Cuando una implementación falle:
+
+1. identificar la causa;
+2. documentarla cuando sea relevante;
+3. corregirla;
+4. determinar si una regla, prueba o procedimiento puede evitar su repetición.
+
+No ocultar errores para mantener una apariencia de progreso.
+
+## 30. Gold Rule
+
+Cuando exista conflicto entre:
+
+* velocidad y calidad;
+* apariencia y realidad;
+* complejidad y simplicidad;
+* automatización y control;
+* una respuesta convincente y una respuesta verificable;
+
+priorizar:
 
 **REALIDAD > APARIENCIA**
 
-El sistema debe evolucionar mediante pequeños incrementos verificables.
+**VERIFICABILIDAD > CONVICCIÓN**
 
-No construir una gran plataforma hipotética.
+**SIMPLICIDAD > COMPLEJIDAD**
 
-Construir una capacidad real, comprobarla y después ampliarla.
+**CALIDAD > VELOCIDAD**
+
+**EVIDENCIA > SUPOSICIÓN**
+
+**UTILIDAD > DEMOSTRACIÓN TECNOLÓGICA**
+
+**APRENDIZAJE > PERFECCIÓN INICIAL**
+
+## 31. Definición operativa de éxito
+
+SieteIQ está avanzando cuando puede demostrar, con un caso real:
+
+**que una fuente de datos relevante puede transformarse de manera reproducible en información;**
+
+**que esa información puede contextualizarse y analizarse;**
+
+**que el sistema puede distinguir hechos, cálculos, inferencias e hipótesis;**
+
+**que puede producir entendimiento útil;**
+
+**que ese entendimiento puede informar una decisión o acción;**
+
+**y que el resultado posterior puede alimentar nuevamente el sistema.**
+
+El objetivo no es construir primero una gran plataforma.
+
+El objetivo es demostrar que esta cadena funciona.
+
+**Datos → Información → Entendimiento → Decisión → Acción → Resultado → Aprendizaje.**
